@@ -6,21 +6,21 @@
 ## Getting started:
 ### Locally: 
 - clone the repo <$ https://github.com/SilviuDN/red4me.git>
-- server: npm run dev
 - client: npm start
-### Remote (available soon):
-- deployed with Heroku: https://red4me.herokuapp.com/ 
+### Remote:
+- server deployed with Heroku: https://red4me.herokuapp.com/ 
+- client deployed with Netlify: https://elegant-mestorf-c094ac.netlify.app/
 
 ## Data persistency:
 - MongoAtlass for the db
 - Cloudinary for the images
 
 ## Environment variables:
-DB_REMOTE
-DOMAIN_LOCAL=http://localhost:3000
-CLOUDINARY_NAME
-CLOUDINARY_KEY
-CLOUDINARY_SECRET
+- DB_REMOTE
+- DOMAIN_LOCAL=http://localhost:3000
+- CLOUDINARY_NAME
+- CLOUDINARY_KEY
+- CLOUDINARY_SECRET
 
 ## Backend dependencies:
     "cloudinary": "^1.26.2",
@@ -68,5 +68,8 @@ CLOUDINARY_SECRET
         - git subtree push --prefix=server red4us_app main
 - didn't work.
 
+## How it worked:
+    1. deploy server to Heroku (functions as an api at https://git.heroku.com/red4us.git)
+    2. deploy client to Netfly ( https://elegant-mestorf-c094ac.netlify.app/phones )
 
 ## Enjoy!
