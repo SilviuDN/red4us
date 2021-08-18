@@ -24,9 +24,12 @@
 - CLOUDINARY_SECRET
 - NETLIFY_BASE_URL
 - SESS_SECRET
+- SESS_SECRET
 
 ## Backend dependencies:
+    "bcrypt": "^5.0.1",
     "cloudinary": "^1.26.2",
+    "connect-mongo": "^4.5.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -72,7 +75,7 @@
 - didn't work.
 
 ## How it worked:
-    1. deploy server to Heroku (functions as an api at https://git.heroku.com/red4us.git)
-    2. deploy client to Netfly ( https://elegant-mestorf-c094ac.netlify.app/phones )
+    1. deploy server to Heroku (functions as an api at https://red4us.herokuapp.com/api/phones )
+    2. deploy client to Netlify ( https://elegant-mestorf-c094ac.netlify.app )
 
 ## Enjoy!
