@@ -5,10 +5,12 @@ const phoneSchema = new Schema({
 
   name: {
     type: String,
+    required: [true, 'name is mandatory.'],
   },
 
   manufacturer: {
     type: String,
+    required: [true, 'manufacturer is mandatory.'],
   },
 
   description: {
@@ -18,10 +20,12 @@ const phoneSchema = new Schema({
 
   color: {
     type: String,
+    required: [true, 'color is mandatory.'],
   },
 
   price: {
     type: Number,
+    required: [true, 'price is mandatory.'],
   },
 
   imageFileName: {
@@ -31,14 +35,17 @@ const phoneSchema = new Schema({
 
   screen: {
     type: String,
+    required: [true, 'screen is mandatory.'],
   },
 
   processor: {
     type: String,
+    required: [true, 'processor is mandatory.'],
   },
   
   ram: {
     type: Number,
+    required: [true, 'ram is mandatory.'],
   },
   owner: {
     type: Schema.Types.ObjectId,

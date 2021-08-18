@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const { handleMongoooseError, isValidIdFormat } = require('../utils')
 
 const Phone = require('./../models/Phone.model')
 
@@ -32,7 +33,7 @@ router.post('/new', (req, res) => {
     Phone
         .create(phone)
         .then(response => res.json(response))
-        .catch(err => res.status(500).json({ code: 500, message: 'Error saving phones', err }))
+        .catch(err => res.status(500).json({ code: 500, message: 'Error saving phones', errors: handleMongoooseError(err)  }))
 })
 
 
