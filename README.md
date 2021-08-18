@@ -16,11 +16,14 @@
 - Cloudinary for the images
 
 ## Environment variables:
+- PORT=5000 (local)
 - DB_REMOTE
 - DOMAIN_LOCAL=http://localhost:3000
 - CLOUDINARY_NAME
 - CLOUDINARY_KEY
 - CLOUDINARY_SECRET
+- NETLIFY_BASE_URL
+- SESS_SECRET
 
 ## Backend dependencies:
     "cloudinary": "^1.26.2",
