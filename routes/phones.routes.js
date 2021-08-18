@@ -27,6 +27,7 @@ router.get('/phone/:phone_id', (req, res) => {
 router.post('/new', (req, res) => {
 
     const phone = req.body
+    phone.owner = req.session.currentUser._id
 
     Phone
         .create(phone)
@@ -46,4 +47,19 @@ router.put('/edit/:phone_id', (req, res) => {
 })
 
 
+router.delete('/delete/:phone_id', (req, res) => {
+
+    Phone
+        .findByIdAndRemove(req.params.phone_id)
+        .then(response => res.json(response))
+        .catch(err => res.status(500).json({ code: 500, message: 'Error editing phones', err }))
+})
+
+
 module.exports = router
+
+
+// const phone = {
+//     ...req.body,
+//     owner : req.session.currentUser._id
+// }

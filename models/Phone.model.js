@@ -40,6 +40,10 @@ const phoneSchema = new Schema({
   ram: {
     type: Number,
   },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  }
 },
 {
   timestamps: true,
